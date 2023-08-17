@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.AchievementsCategory>
+@if (Model != null && Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <a href="#@item.Alias">@item.Title</a>
+        if (item != Model.ToList().Last())
+        {
+            <a>|</a>
+        }
+    }
+}

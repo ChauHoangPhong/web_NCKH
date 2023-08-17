@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- meta infomation -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <!-- page title -->
+    <title>@ViewBag.Title</title>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&amp;family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 120%;
+        }
+    </style>
+    <link href="~/Content/assets/use.fontawesome.com/releases/v5.14.0/css/all.css" rel="stylesheet">
+    <!-- stylesheets -->
+    <link href="~/Content/assets/css/radix.3.0.2.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/style_en.css" rel="stylesheet" type="text/css">
+    <!-- javascript -->
+    <script src="~/Content/assets/js/radix.3.0.2.js"></script>
+    <script src="~/Content/assets/js/index.js"></script>
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+
+</head>
+<body>
+    <header>
+        <div class="header-body centering">
+
+            <a href="#" class="logo-link">
+                <img src="~/Content/assets/img/template/z3356589663673_e6de475a769ec793a307c89911db9305.jpg" alt="banner logo" class="header-banner">
+            </a>
+            <button id="toggle-nav" class="pc-none"><div id="svg-toggle">#svg</div></button>
+            
+        </div>
+    </header>
+
+    <nav id="global-nav">
+        @Html.Action("Menutop", "Menu")
+        <div class="header_button pc-none">
+            <a href="sitemap-e.html" class="sitemap login-btn"><i class="fas fa-user"></i>ĐĂNG NHẬP</a>
+        </div>
+    </nav>
+    @RenderBody()
+
+    <footer>
+        <a href="#" class="pagetop rdx-scroll-appear text-clear" rdx-scroll-appear-fixed="300" rdx-scroll-appear-reset="true" rdx-scroll-appear-delay="0">#pagetop</a>
+        <div class="footer-body centering">
+            <ul class="footer-nav sp-none">
+                @Html.Action("Menudown", "Menu")
+            </ul>
+            <div class="footer-info">
+                <div class="footer-logo text-clear">#logo</div>
+            </div>
+            <p class="copyright">Copyright &copy; Nhóm 2 - DHTI14A11HN.</p>
+        </div>
+    </footer>
+
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>

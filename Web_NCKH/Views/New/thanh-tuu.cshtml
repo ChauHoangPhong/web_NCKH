@@ -1,0 +1,338 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.Member>
+@{
+    ViewBag.Title = "Danh sách thành viên";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main>
+    <article>
+        <ol class="breadcrumb">
+            <li><a href="index-e.html">Home</a></li>
+            <li>Members</li>
+        </ol>
+        <h1>Members</h1>
+        <section>
+            <div class="entry-content">
+                <p><a href="#group1">Staff</a> | <a href="#group2">Students</a> | <a href="#group3">Associate members</a> | <a href="#group4">Visiting researchers</a> | <a href="#group5">Past students (Ph.D.)</a> | <a href="#group9">Past students (Master)</a> | <a href="#group6">Past members</a> | <a href="#group7">NII Internship students</a> | <a href="#group8">NII MOU/non-MOU Grant researchers</a></p>
+                <p><a id="group1"></a></p>
+                <h2>Staff</h2>
+                <table width="660" border="0" cellspacing="2" cellpadding="3" class="margin_top_none last">
+                    <tbody>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Professor</td>
+                            <td width="340" bgcolor="#F0E1FF"><a href="members_echizen-e.html">Isao Echizen</a></td>
+                        </tr>
+
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Project Assistant Professor</td>
+                            <td width="340" bgcolor="#F6EEFF"><a href="https://honghuy127.github.io/">Nguyen Hong Huy</a></td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Project Posdoc Researcher</td>
+                            <td width="340" bgcolor="#F6EEFF">Ching-Chun Chang</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Project Posdoc Researcher</td>
+                            <td width="340" bgcolor="#F6EEFF">Tinghui Ouyang</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Project Posdoc Researcher</td>
+                            <td width="340" bgcolor="#F6EEFF">April Pyone Maung Maung</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Specially Appointed Specialist</td>
+                            <td width="340" bgcolor="#F0E1FF">Hirokazu Machiya</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Specially Appointed Specialist</td>
+                            <td width="340" bgcolor="#F6EEFF">Miki Nihei</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Specially Appointed Specialist</td>
+                            <td width="340" bgcolor="#F0E1FF">Mai Saito</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a id="group2"></a></p>
+                <h2>Students</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Ph.D Course, The University of Tokyo</td>
+                            <td width="340" bgcolor="#F0E1FF">Yi Ji</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Ph.D Course, The University of Tokyo</td>
+                            <td width="340" bgcolor="#F0E1FF">YuYang Sun</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Ph.D Course, The University of Tokyo</td>
+                            <td width="340" bgcolor="#F0E1FF">Futa Waseda</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Master Course, The University of Tokyo</td>
+                            <td width="340" bgcolor="#F0E1FF">Shuhan Cui</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Master Course, The University of Tokyo</td>
+                            <td width="340" bgcolor="#F0E1FF">Yuran Qiu</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Master Course, The University of Tokyo</td>
+                            <td width="340" bgcolor="#F0E1FF">Zhicheng Dou</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">3-Year Ph.D Course, The Graduate University for Advanced Studies (SOKENDAI)</td>
+                            <td width="340" bgcolor="#F6EEFF">Jian Wang</td>
+                        </tr>
+
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">5-Year Ph.D Course, The Graduate University for Advanced Studies (SOKENDAI)</td>
+                            <td width="340" bgcolor="#F6EEFF">Erjin Bao</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">5-Year Ph.D Course, The Graduate University for Advanced Studies (SOKENDAI)</td>
+                            <td width="340" bgcolor="#F6EEFF">Fatma Mohamed Faek</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">5-Year Ph.D Course, The Graduate University for Advanced Studies (SOKENDAI)</td>
+                            <td width="340" bgcolor="#F6EEFF">Hichem Felouat</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Research student, The University of Tokyo</td>
+                            <td width="340" bgcolor="#F6EEFF">Kefei Wu</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Research student, The University of Tokyo</td>
+                            <td width="340" bgcolor="#F0E1FF">Yuchen Guo</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Research student, The University of Tokyo (MEXT Scholarship)</td>
+                            <td width="340" bgcolor="#F6EEFF">Byeongseo Bok</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Internship student Sorbonne Université</td>
+                            <td width="340" bgcolor="#F0E1FF">Folco Bertini</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Internship student Technische Universität München</td>
+                            <td width="340" bgcolor="#F6EEFF">Siyun Liang</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Internship student Pontificia Universidad Católica de Chile</td>
+                            <td width="340" bgcolor="#F0E1FF">Nicolas Berrios</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Internship student Technische Universität Wien</td>
+                            <td width="340" bgcolor="#F6EEFF">Matthias Eckhart</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Internship student Albert-Ludwigs-Universität Freiburg</td>
+                            <td width="340" bgcolor="#F6EEFF">Lukas Strack</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a id="group3"></a></p>
+                <h2>Associate members</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Professor</td>
+                            <td width="340" bgcolor="#F0E1FF"><a href="https://researchmap.jp/read0205283?lang=en">Junichi Yamagishi</a></td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Specially Appointed Assistant Professor</td>
+                            <td width="340" bgcolor="#F6EEFF">Wang Xin</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Specially Appointed Assistant Professor</td>
+                            <td width="340" bgcolor="#F0E1FF">Cooper Erica</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Specially Appointed Assistant Professor</td>
+                            <td width="340" bgcolor="#F6EEFF">Kruengkrai Canasai</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Ph.D Course, The Graduate University for Advanced Studies (SOKENDAI)</td>
+                            <td width="340" bgcolor="#F6EEFF">Lin Zhang</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Ph.D Course, The Graduate University for Advanced Studies (SOKENDAI)</td>
+                            <td width="340" bgcolor="#F0E1FF">CHANG ZENG</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a id="group4"></a></p>
+                <h2>Visiting researchers</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Visiting Professor　Tsuda University</td>
+                            <td width="340" bgcolor="#F0E1FF">Noboru Sonehara</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Visiting Professor　Osaka University</td>
+                            <td width="340" bgcolor="#F6EEFF">Noboru Babaguchi</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Visiting Professor　Tokyo Metropolitan University</td>
+                            <td width="340" bgcolor="#F0E1FF">Hitoshi Kiya</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Visiting Professor　University of Freiburg</td>
+                            <td width="340" bgcolor="#F6EEFF">Guenter Mueller</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Visiting Professor　Vienna University of Technology</td>
+                            <td width="340" bgcolor="#F0E1FF">A Min Tjoa</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Visiting Professor　Goethe University</td>
+                            <td width="340" bgcolor="#F6EEFF">Kai Rannenberg</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Visiting Professor　University of Vienna</td>
+                            <td width="342" bgcolor="#F0E1FF">Edgar Weippl</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">Visiting Professor　Academia Sinica</td>
+                            <td width="342" bgcolor="#F0E1FF">Chun-Shien Lu</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Visiting Associate Professor　Tokyo Institute of Technology</td>
+                            <td width="340" bgcolor="#F6EEFF">Kazutoshi Sasahara</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Visiting Associate Professor　Okayama University</td>
+                            <td width="340" bgcolor="#F6EEFF">Minoru Kuribayashi</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a id="group5"></a></p>
+                <h2>Past students (Ph.D.)</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">The Graduate University for Advanced Studies (SOKENDAI) 2012.9</td>
+                            <td width="340" bgcolor="#F6EEFF">Takayuki Yamada &lt;NII Best Student Award&gt;</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">The Graduate University for Advanced Studies (SOKENDAI) 2015.9</td>
+                            <td width="340" bgcolor="#F0E1FF">Nguyen Son Hoang Quoc</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">The Graduate University for Advanced Studies (SOKENDAI) 2016.9</td>
+                            <td width="340" bgcolor="#F6EEFF">Shimon Machida &lt;NII Best Student Award&gt;</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">5-Year Ph.D Course, The Graduate University for Advanced Studies (SOKENDAI) 2019.9</td>
+                            <td width="340" bgcolor="#F0E1FF"><a href="https://sites.google.com/site/bvthachqn">Bui Van Thach</a>&lt;<a href="https://www.soken.ac.jp/news/6385/" target="_blank">SOKENDAI Award</a>&gt;</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">5-Year Ph.D Course, The Graduate University for Advanced Studies (SOKENDAI) 2021.9</td>
+                            <td width="340" bgcolor="#F6EEFF">Tieu Thi Ngoc Dung</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F0E1FF">5-Year Ph.D Course, The Graduate University for Advanced Studies (SOKENDAI) 2022.3</td>
+                            <td width="340" bgcolor="#F0E1FF">Nguyen Hong Huy &lt;NII Best Student Award&gt;</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <p><a id="group9"></a></p>
+                <h2>Past students (Master)</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Master Course, The University of Tokyo 2022.3</td>
+                            <td width="340" bgcolor="#F6EEFF">Sosuke Nishikawa &lt;Department Head's Award&gt;</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Master Course, The University of Tokyo 2023.3</td>
+                            <td width="340" bgcolor="#F6EEFF">Futa Waseda</td>
+                        </tr>
+                        <tr>
+                            <td width="320" bgcolor="#F6EEFF">Master Course, The University of Tokyo 2023.3</td>
+                            <td width="340" bgcolor="#F6EEFF">Sho Yoshida</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a id="group6"></a></p>
+                <h2>Past members</h2>
+                <ul>
+                    <li>Sven Wohlgemuth, DAAD  Posdoc research fellow</li>
+                    <li>Mwambe Othmar Othmar, Research student</li>
+                    <li>Thibault Julliand, Université Gustave Eiffel, France</li>
+                    <li>Nicolas Rahmouni, Research student</li>
+                    <li>Darius Afchar Heravi Moghaddam, Research student</li>
+                    <li><a href="https://igm.univ-mlv.fr/~vnozick/">Vincent Nozick</a>, Université Gustave Eiffel, France</li>
+                    <li>Nguyen Son Hoang Quoc, Project Postdoc Researcher</li>
+                    <li>Fang Fuming, Project Postdoc Researcher</li>
+                    <li>Kai Zhu, Research student</li>
+                    <li><a href="https://sites.google.com/view/ltnghia/home">Le Trung-Nghia</a>, Project Assistant Professor</li>
+                    <li>Nguyen Duy Khanh, Project Postdoc Researcher</li>
+                </ul>
+                <p><a id="group7"></a></p>
+                <h2>NII Internship students</h2>
+                <ul>
+                    <li>Trung Nguyen Thanh, University of Natural  Sciences-VNU, Vietnam (Dec. 2007- Mar. 2008)</li>
+                    <li>Tran Minh Triet, University of Natural  Sciences-VNU, Vietnam (Mar. 2008- Jun. 2008)</li>
+                    <li>Tran Hong Ngoc, University of Natural  Sciences-VNU, Vietnam (Apr. 2009- Oct. 2009)</li>
+                    <li>Narit Hnoohom, Chulalongkorn University,  Thailand (Jul. 2009- Sep. 2009)</li>
+                    <li>Mahasak Ketcham, Chulalongkorn University,  Thailand (Jul. 2009- Aug. 2009)</li>
+                    <li>Hue Thi Bach Pham, University of Natural  Sciences-VNU, Vietnam (Sep. 2009- Feb. 2010)</li>
+                    <li>Hai Van Dang, University of Natural  Sciences-VNU, Vietnam (Feb. 2010- Apr. 2010)</li>
+                    <li>Jeremie Tharaud, INPG-ENSIMAG, France (Mar.  2010- Aug. 2010)</li>
+                    <li>Klaus Rechert, University of Freiburg,  Germany (Oct. 2010- Feb. 2011)</li>
+                    <li>Nguyen Quoc Binh, University of Natural  Sciences-VNU, Vietnam (Jan. 2011- Jul. 2011)</li>
+                    <li>Sebastian Schrittwieser, Vienna University of Technology, Austria (Feb. 2011- Mar. 2011)</li>
+                    <li>Martin Erich Salfer, University of  Augsburg, Germany (Mar. 2011- Dec. 2011)</li>
+                    <li>Nguyen Son Hoang Quoc, University of  Natural Sciences-VNU, Vietnam (Sep. 2011- Mar. 2012)</li>
+                    <li>Jorge  Munoz, Universitat Politecnica de Catalunya (UPC), Spain (Jan. 2012- Mar. 2012)</li>
+                    <li>Jian Wang, RWTH Aachen, Germany (Feb. 2012- Jun. 2012)　</li>
+                    <li>Dung Tien Tran, Hanoi University of Science and  Technology, Vietnam (Mar. 2012- Aug. 2012)　</li>
+                    <li>Nguyen Son Hoang Quoc, University of  Natural Sciences-VNU, Vietnam (Jul. 2012- Sep. 2012)</li>
+                    <li>Pilar Martinez Castilla, Polytechnic University of Valencia, Spain (Oct. 2012- Mar. 2013)</li>
+                    <li> Johann Latocha, University of Freiburg, Germany (Feb. 2013- May 2013)</li>
+                    <li>Adrian Dabrowski, Vienna University of Technology, Austria (Mar. 2013- Jun. 2013)</li>
+                    <li>Hoang Anh Tu, University of Science, VNU-HCM, Vietnam (Mar. 2013- Sep. 2013)</li>
+                    <li> Bui Van Thach, University of Science, VNU-HCM, Vietnam (Aug. 2013- Jan. 2014)</li>
+                    <li> Erwan Chaussy, University of Paris-Sud, France (Feb. 2014- Aug. 2014)</li>
+                    <li> Alberto Escalada, Politécnica de Madrid, Spain (Mar. 2014- Aug. 2014)</li>
+                    <li> Toan Thinh Trung, Vietnam National University of Ho Chi Minh City, Vietnam (Aug. 2014- Dec. 2014)</li>
+                    <li> Adrian Dabrowski, Vienna University of Technology, Austria (Sep. 2014- Jan. 2015)</li>
+                    <li> Nguyen Hong Huy, Vietnam National University of Ho Chi Minh City, Vietnam (Feb. 2015- Aug. 2015)</li>
+                    <li>Nguyen Duc Than, Vietnam National University of Ho Chi Minh City, Vietnam (Feb. 2015- Aug. 2015)</li>
+                    <li> Vanja Culafic, Vienna University of Technology, Austria (Jan. 2016- May 2016)</li>
+                    <li> Nguyen Hong Huy, Vietnam National University of Ho Chi Minh City, Vietnam (Jul. 2016- Sep. 2016)</li>
+                    <li> Raphael Toledo, University College London, England  (Mar. 2017- May. 2017)</li>
+                    <li> Emmanuel Aacha, The Universite Paul Sabatier of Toulouse, France(Mar. 2017- Sep. 2017)</li>
+                    <li> Frederik Mollers, Saarland University, Germany(Mar. 2017- Jul. 2017)</li>
+                    <li> Matthias Gusenbauer, Vienna University of Technology, Austria(Aug. 2017- Feb. 2018)</li>
+                    <li> Oscar Francisco Godinho Pereira, INESC Technology and Science  (INESC TEC), Portugal(Mar. 2018- May 2018)</li>
+                    <li>Awny Mohammed Mohsen Abdel Rahman Ahmed El-Mohandes, Egypt-Japan University of Science and Technology (E-JUST), Egypt(Jan. 2018- Jul. 2018)</li>
+                    <li> Paul Antonio Calderon, Institut Nationale Polytechnique de Grenoble - ENSIMAG, France(Feb. 2018- Aug. 2018) </li>
+                    <li> Bui Huy Thong, HCMC University Science (Vietnam National University - Ho Chi Minh City), Vietnam(Mar. 2018- Aug. 2018)</li>
+                    <li> Haotian Mai, University of Southern California/Viterbi School of Engineering, USA(Aug. 2018- Dec. 2018)</li>
+                    <li>Alireza Zarei, University of Gottingen, Germany(Oct. 2018- Dec. 2018)</li>
+                    <li>David Ifeoluwa Adelani, Saarland University, Nigeria (Jan. 2019- Apr. 2019)</li>
+                    <li>Trong-Le Do, Vietnam National University of Ho Chi Minh City, Vietnam (Oct. 2019- Mar. 2020)</li>
+                </ul>
+                <p><a id="group8"></a></p>
+                <h2>NII MOU/non-MOU Grant researchers</h2>
+                <ul>
+                    <li>Sven Wohlgemuth, University of Freiburg,  Germany (July 2008- Sep. 2008)</li>
+                    <li>Tran Minh Triet, University of Natural  Sciences-VNU, Vietnam (Aug. 2009- Sep. 2009)</li>
+                    <li>Antonio Savoldi, University of Brescia,  Italy (Aug. 2009- Sep. 2009)</li>
+                    <li>Tran Minh Triet, University of Natural  Sciences-VNU, Vietnam (Aug. 2010- Sep. 2010)</li>
+                    <li>Stefan Sackmann, University of Halle-Wittenberg,  Germany (Feb. 2011- Mar. 2011)</li>
+                    <li>Rigo Wenning, The European Research  Consortium for Informatics and Mathematics (ERCIM)/W3C, France (Jul. 2011- Aug.  2011)</li>
+                    <li>Claudia Diaz, COSIC (Computer Security and  Industrial Cryptography) of the Katholieke Universiteit Leuven, Belgium (Jul.  2011- Aug. 2011)</li>
+                    <li>Stefan  Sackmann, University of Halle-Wittenberg, Germany (Mar. 2012- Apr. 2012)</li>
+                    <li>Jorge  Munoz, Universitat Politecnica de Catalunya (UPC), Spain (Sep. 2012)</li>
+                    <li>Ioannis Krontiris, Goethe University Frankfult, Germany (Sep. 2012)</li>
+                    <li>Ioannis Krontiris, Goethe University Frankfult, Germany (June 2014)</li>
+                </ul>
+            </div>
+        </section>
+    </article>
+</main>

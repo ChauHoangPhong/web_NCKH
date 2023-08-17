@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.Member>
+@{
+    ViewBag.Title = "Danh sách thành viên";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main>
+    <article>
+        <ol class="breadcrumb">
+            <li><a href="/trang-chu">Trang chủ</a></li>
+            <li>Thành viên</li>
+        </ol>
+        <h1>Thành viên</h1>
+        <section>
+            <div class="entry-content">
+                <p>
+                    @Html.Action("MembersLocation", "Members")
+                @Html.Action("MembersList", "Members")
+            </p>
+        </div>
+    </section>
+</article>
+<aside>
+    <ul class="banners rdx-flex-fix">
+        @Html.Action("MenuAdv", "Menu")
+    </ul>
+</aside>
+</main>

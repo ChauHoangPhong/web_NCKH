@@ -1,0 +1,124 @@
+﻿@model Web_NCKH.Models.EF.Achievements
+@{
+    ViewBag.Title = "Chỉnh sửa thành tựu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section naviheader{
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="/admin" class="nav-link">Trang chủ</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="/admin/achievements" class="nav-link">Thành tựu</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">Chỉnh sửa</a>
+        </li>
+    </ul>
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>@ViewBag.Title</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/admin/achievements">Thành tựu</a></li>
+                    <li class="breadcrumb-item active">Chỉnh sửa</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Thông tin thành tựu</h3>
+
+        </div>
+        <div class="card-body">
+            <div class="bs-stepper-content">
+                @using (Html.BeginForm("Edit", "Achievements", FormMethod.Post, new { }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(x => x.Id)
+                    @Html.HiddenFor(x => x.CreateDate)
+                    <!-- your steps content here -->
+
+                    <div id="logins-part" class="content active dstepper-block" role="tabpanel" aria-labelledby="logins-part-trigger">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="exampleInputEmail1">Hạng mục</label>
+                                    @Html.DropDownListFor(x => x.AchievementsCategoryID, ViewBag.AchievementsCategory as SelectList, "-Chọn hạng mục-", new { @class = "form-control", @placeholder = "Hạng mục" })
+                                    @Html.ValidationMessageFor(x => x.AchievementsCategoryID, null, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-6">
+                                    <label for="exampleInputEmail1">Năm đạt thành tựu</label>
+                                    @Html.DropDownListFor(x => x.AchievementsDateID, ViewBag.AchievementsDate as SelectList, "-Chọn năm-", new { @class = "form-control", @placeholder = "Năm đạt thành tựu" })
+                                    @Html.ValidationMessageFor(x => x.AchievementsDateID, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Tác phẩm</label>
+                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "Nhập tên tác phẩm" })
+                            @Html.ValidationMessageFor(x => x.Title, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Chi tiết</label>
+                            @Html.TextAreaFor(x => x.Details, new { @class = "form-control", @id = "txtDetail" })
+
+                        </div>
+                        <div class="form-group">
+                            <a href="/admin/achievements" class="btn btn-danger">Quay lại</a>
+                            <button type="submit" class="btn btn-primary">Lưu</button>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+
+        </div>
+        <!-- /.card-footer-->
+    </div>
+    <!-- /.card -->
+
+</section>
+<!-- /.content -->
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            CKEDITOR.replace('txtDetail', {
+                customConfig: '/content/ckeditor/config.js',
+                extraAllowedContent: 'span',
+            });
+        });
+        function BrowseServer(field) {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                document.getElementById(field).value = fileUrl;
+            }
+            finder.popup();
+        }
+    </script>
+
+}
+
+
+

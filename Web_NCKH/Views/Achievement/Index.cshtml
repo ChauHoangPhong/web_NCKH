@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Danh sách thành tựu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main>
+    <article>
+        <ol class="breadcrumb">
+            <li><a href="/trang-chu">Trang chủ</a></li>
+            <li>Thành tựu</li>
+        </ol>
+        <section>
+            <h1>Thành tựu</h1>
+            <ul>
+                @Html.Action("MenuLeft","Menu", new { id = ViewBag.CateId })
+            </ul>
+        </section>
+    </article>
+    <aside>
+        <ul class="banners rdx-flex-fix">
+            @Html.Action("MenuAdv", "Menu")
+        </ul>
+    </aside>
+</main>
+
+

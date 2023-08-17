@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.Achievements>
+@{
+    ViewBag.Title = "Chi tiết thành tựu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var groupedMembers = Model.GroupBy(m => m.AchievementsCategory.Title);
+}
+<main>
+    <article>
+        <ol class="breadcrumb">
+            <li><a href="/trang-chu">Trang chủ</a></li>
+            <li><a href="/thanh-tuu">Thành tựu</a></li>
+            <li>@ViewBag.CateName</li>
+        </ol>
+        <h1>Achievements(@ViewBag.CateName)</h1>
+        <section>
+            <p>@Html.Action("AchiCate","Achievement")</p>
+            @foreach (var group in groupedMembers) {
+                <h2 id="@group.First().AchievementsCategory.Alias">@group.Key</h2>
+            <ol>
+                @foreach(var item in Model) { 
+                <li>@item.Title</li>
+                    }
+             </ol>
+            }
+        </section>
+    </article>
+    <aside>
+        <ul class="banners rdx-flex-fix">
+            @Html.Action("MenuAdv", "Menu")
+        </ul>
+    </aside>
+</main>
+

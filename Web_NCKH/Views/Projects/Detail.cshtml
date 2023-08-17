@@ -1,0 +1,57 @@
+﻿@model Web_NCKH.Models.EF.Project
+@{
+    ViewBag.Title = "Chi tiết dự án";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .news_section_container {
+        margin-top: 100px;
+        margin: auto;
+        width: 65%; /* adjust to your desired width */
+    }
+
+    .title-news {
+        font-size: 30px;
+        border-bottom: 1px solid;
+        padding: 15px 0;
+        margin-bottom: 25px;
+    }
+
+    .img-box {
+        max-width: 400px;
+        max-height: 500px;
+    }
+
+    row-item-new {
+        margin-bottom: 20px;
+    }
+</style>
+<main>
+    <article>
+        <section>
+            @if (Model != null)
+            {
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="title-news">@Model.Title</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <strong>@Model.Description </strong>
+
+                    </div>
+                    <div class="col-md-12">
+                        @Html.Raw(Model.Detail)
+                    </div>
+                </div>
+            }
+
+        </section>
+    </article>
+    <aside>
+        <ul class="banners rdx-flex-fix">
+            @Html.Action("MenuAdv", "Menu")
+        </ul>
+    </aside>
+</main>

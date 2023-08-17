@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.Project>
+@{
+    ViewBag.Title = "Danh sách dự án";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .title-news {
+        font-size: 30px;
+        border-bottom: 1px solid;
+        padding: 5px 0;
+        margin-bottom: 25px;
+    }
+
+    .item-right {
+        width: calc(65% - 20px);
+        float: left;
+        padding-left: 20px;
+    }
+
+    .img-box {
+        max-width: 400px;
+        max-height: 500px;
+    }
+
+    .row-item-new {
+        margin-bottom: 20px;
+    }
+
+    .feature-post {
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+        border-bottom: 1px dotted #d9d9d9;
+        width: 100%;
+        float: left;
+        clear: both;
+    }
+
+    .item-left {
+        width: 35%;
+        float: left;
+    }
+
+    .item-right h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #000;
+    }
+
+    .description-box {
+        font-size: 15px;
+    }
+
+    .entry-meta {
+        font-size: 13px;
+        margin-bottom: 5px;
+        color: #666;
+    }
+
+    .box {
+        margin-bottom: 15px;
+        width: 100%;
+        float: left;
+        clear: both;
+    }
+</style>
+<main>
+    <article>
+        <section>
+            <div class="row row-item-new">
+                <div class="col-md-12">
+                    <h1 class="title-news">Dự án</h1>
+                </div>
+            </div>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model.OrderByDescending(x => x.CreateDate))
+                {<div class="feature-post">
+                        <div class="row row-item-new">
+                            <div class="col-sm-3 item-left">
+                                <div class="img-box">
+                                    <a href="" title="@item.Title"><img src="@item.Image" alt="@item.Title" /></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 item-right">
+                                <div class="content-box">
+                                    <h3><a href="@(!string.IsNullOrEmpty(item.Link) ? item.Link : ("/" + item.Alias + "-" + item.Id))" title="@item.Title"> @item.Title</a></h3>
+                                    <div class="entry-meta">Ngày đăng: @item.CreateDate.ToString("dd/MM/yyyy")</div>
+                                    <div class="description-box">@item.Description</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </section>
+    </article>
+    <aside>
+        <ul class="banners rdx-flex-fix">
+            @Html.Action("MenuAdv", "Menu")
+        </ul>
+    </aside>
+</main>

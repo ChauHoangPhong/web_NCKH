@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.Adv>
+@if (Model != null && Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <li><a href="@item.Link" target="_blank" class="text-clear" style="background-image: url(@item.Image)"> @item.Title</a></li>
+    }
+
+}

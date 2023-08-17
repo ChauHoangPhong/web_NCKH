@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.Member>
+
+@{
+    var groupedMembers = Model.GroupBy(m => m.LocationCategory.Title);
+}
+
+@foreach (var group in groupedMembers)
+{   <h2>@group.Key</h2>
+    <p><a id="@group.First().LocationCategory.Alias"></a></p>
+    <table width="660" border="0" cellspacing="2" cellpadding="3" class="margin_top_none last">
+        <tbody>
+            @foreach (var item in group)
+            {
+                <tr>
+                    <td width="320" bgcolor="#F0E1FF">@item.Description</td>
+                    <td width="340" bgcolor="#F0E1FF"><a href="@(!string.IsNullOrEmpty(item.Link) ? item.Link : ("/" + item.Alias + "-m" + item.Id))">@item.Title</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

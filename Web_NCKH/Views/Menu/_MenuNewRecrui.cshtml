@@ -1,0 +1,7 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.Recruitment>
+@if (Model != null && Model.Any())
+{
+    var latestRecruitment = Model.OrderByDescending(x => x.CreateDate).FirstOrDefault();
+    <dt>@latestRecruitment.CreateDate.ToString("dd/MM/yyyy")</dt>
+    <dd><a href="/@latestRecruitment.Alias-i@(latestRecruitment.Id)" target="_blank">[Tuyển dụng] @latestRecruitment.Title</a></dd>
+}

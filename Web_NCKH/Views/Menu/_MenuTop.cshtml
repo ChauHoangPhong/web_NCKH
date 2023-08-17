@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.Category>
+
+@if(Model!=null&&Model.Any())
+ { <ul class="centering">
+    @foreach (var item in Model)
+    {
+        <li><a href="/@item.Alias">@item.Title</a></li>
+    }
+    @*<li><a href="index-e.html">Home</a></li>
+    <li><a href="new-research-e.html">Projects</a></li>
+    <li><a href="members-e.html">Members</a></li>
+    <li><a href="achievements-e.html">Achievements</a></li>
+    <li><a href="recruitment-e.html">Recruitment</a></li>*@
+</ul>
+
+ }

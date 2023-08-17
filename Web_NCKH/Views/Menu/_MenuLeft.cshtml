@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.AchievementsDate>
+@if (Model != null && Model.Any())
+{<ul>
+    @foreach (var item in Model.OrderByDescending(x => x.CreateDate))
+    {
+        if (ViewBag.cateId == item.Id)
+        {
+            <li class="active"><a href="/chi-tiet-thanh-tuu/@item.Alias-@(item.Id)"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>@item.Date</a></li>
+        } else
+           {
+             <li><a href="/chi-tiet-thanh-tuu/@item.Alias-@(item.Id)">@item.Date</a></li>
+           }
+    }
+
+</ul>
+
+ }

@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.AchievementsDate>
+<ul>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var item in Model)
+        {
+            <li><a href="/@item.Alias">@item.Date</a></li>
+        }
+
+    }
+</ul>

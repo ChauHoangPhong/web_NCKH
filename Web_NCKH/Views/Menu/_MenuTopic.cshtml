@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Web_NCKH.Models.EF.New>
+@if (Model != null && Model.Any())
+{
+    foreach (var item in Model.OrderByDescending(x => x.CreateDate))
+    {
+        <dt>@item.CreateDate.ToString("dd/MM/yyyy")</dt>
+        <dd><a href="/@item.Alias-n@(item.Id)">@item.Title</a></dd>
+    }
+   
+}
